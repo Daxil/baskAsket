@@ -1,0 +1,88 @@
+.content i {
+  color: #FFC107; /* Цвет для активных звезд */
+}
+
+.content span {
+  position: relative;
+  display: inline-block;
+}
+
+.content span:before,
+.content span:after {
+  position: absolute;
+  content: "";
+  background-color: #282828;
+  width: 40px;
+  height: 2px;
+}
+
+.content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.wrapper {
+  position: relative;
+  display: inline-block;
+  border: none;
+}
+
+.wrapper input {
+  border: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0;
+}
+
+.wrapper label {
+  position: relative;
+  float: right;
+  color: #C8C8C8; /* Цвет для неактивных звезд */
+}
+
+.wrapper label:before {
+  margin: 5px;
+  content: "\f005"; /* Символ звезды */
+  display: inline-block;
+  font-size: 1.5em;
+  color: #ccc; /* Цвет для неактивных звезд */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.wrapper input:checked ~ label:before {
+  color: #FFC107; /* Цвет для активных звезд */
+}
+
+.wrapper label:hover ~ label:before {
+  color: #ffdb70; /* Цвет при наведении для неактивных звезд */
+}
+
+.wrapper label:hover:before {
+  color: #FFC107; /* Цвет при наведении для активных звезд */
+}
+.minimalist-date-time {
+  margin-bottom: 20px;
+}
+
+.minimalist {
+  border: 1px solid #ced4da; /* Светлая граница */
+  border-radius: 4px; /* Закругленные углы */
+  padding: 10px; /* Отступи внутри элемента */
+  transition: border-color 0.3s; /* Плавный переход цвета границы */
+}
+
+.minimalist:focus {
+  border-color: #80bdff; /* Цвет границы при фокусе */
+  outline: none; /* Убираем стандартный контур */
+}
+
+.minimalist::placeholder {
+  color: #6c757d; /* Цвет текста плейсхолдера */
+  opacity: 1; /* Установка полной непрозрачности */
+}
